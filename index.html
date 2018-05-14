@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="responsive.css">
+    <!-- jQueryの読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <title>Your Navi</title>
+    <!-- id="target"をCSSで指定 -->
+    <style>
+      #target {
+        width: 80%;
+        height: 50%;
+        margin: 0 auto;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header content -->
+    <header>
+      <div class="container">
+        <div class="header-title">
+          <a class="logo" href="#">YourNavi</a>
+        </div>
+        <div class="header-menu">
+          <a href="#">About</a>
+          <a href="#">Navi</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+    <!-- Top content -->
+    <div id="home" class="top-section">
+      <div class="image-mask">
+        <div class="container">
+          <h2>一緒に旅をしよう</h2>
+          <p>有名なのに意外と行ったことがない</p>
+          <p>マストな場所から穴場まで</p>
+          <div class="top-detail">
+            <a class="btn btn-top-detail" id="read_more" href="#">さっそく旅する</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- read-moreのモーダル -->
+    <!-- <div class="read-more-modal-wrapper" id="read_more_modal">
+      <div class="modal">
+        <div id="read_more_message">
+          <h2>準備OK</h2>
+          <p>トップページのマップから他の場所にも行けるよ！</p>
+           <a id="toHokkaido_btn" href="#">まずは北海道へ！</a>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Main content -->
+    <div class="caption-wrapper">
+      <div class="container">
+        <div class="heading">
+          <h2>一度は行ってみたいマストスポットを検索</h2>
+        </div>
+        <div class="caption">
+          <div class="left-caption">
+            <p>マップ下にあるボックスから<br>地域を選んでクリック!</p>
+          </div>
+          <div class="right-caption">
+            <p><img src="red.png">赤ピンはマストスポットで<br><img src="black.png">黒ピンは穴場スポットだよ</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ここにgoogle maps apiを表示 -->
+    <div id="target"></div>
+    <!-- 地域選択ボタン -->
+    <div class="destination">
+      <div class="container">
+        <form>
+          <p>
+            <button type="button" onClick="setTokyo()">東京</button>
+            <button type="button" onClick="setOsaka()">大阪</button>
+          </p>
+        </form>
+      </div>
+    </div>
+    <!-- ガイド文紹介 -->
+    <div class="guide-wrapper">
+      <div class="container">
+        <div class="guidance">
+          <h3>有名すぎて、何となく行った気になっている</h3>
+          <p>そんな場所って意外と多くありませんか？それならいっそ本当に行ったつもりになりましょう！</p>
+          <p>猫のミーホン＆うさぎの「うさぎ」が全国に飛びます！</p>
+        </div>
+      </div>
+    </div>
+    <!-- ここからフッター -->
+    <footer>
+      <div class="container">
+        <div class="footer-title">
+          <a class="logo" href="#">YourNavi</a>
+        </div>
+        <div class="footer-menu">
+          <ul>
+            <li><a href="#">このサイトについて</a></li>
+            <li><a href="#">ナビゲーション</a></li>
+            <li><a href="#">コンタクト</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- google maps api の読み込み -->
+    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key=AIzaSyAhXHIHT44fngouJi0S4RsP5GPQfRa_Zz4&callback=initMap" async defer></script>
+
+    <!-- google maps apiが読み込まれた時のcallback関数 -->
+    <script type="text/javascript" src="js/map.js"></script>
+    <!-- jQueryファイルの読み込み -->
+    <script src="js/jQuery.js"></script>
+  </body>
+</html>
