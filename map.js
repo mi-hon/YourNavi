@@ -20,13 +20,13 @@ function initMap() {
   var icons = {
     red: {
       icon: {
-        url: 'image/redMarker.png',
+        url: 'redMarker.png',
         scaledSize: new google.maps.Size(40, 40)
       }
     },
     black: {
       icon: {
-        url: 'image/blackMarker.png',
+        url: 'blackMarker.png',
         scaledSize: new google.maps.Size(40, 40)
       }
     }
